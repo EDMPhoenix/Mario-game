@@ -1,3 +1,5 @@
+// IMPORTANT: Make sure to use Kaboom version 0.5.0 for this game by adding the correct script tag in the HTML file.
+
 kaboom({
   global: true,
   fullscreen: true,
@@ -6,12 +8,15 @@ kaboom({
   clearColor: [0,0,0,1],
 });
 
+// Speed Identifiers
 const MOVE_SPEED = 120;
 const JUMP_FORCE = 360;
 const BIG_JUMP_FORCE = 550;
 let CURRENT_JUMP_FORCE = JUMP_FORCE;
 const FALL_DEATH = 400;
 const ENEMY_SPEED = 20;
+
+// Game Logic
 
 let isJumping = true;
 
