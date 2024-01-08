@@ -10,10 +10,12 @@ const MOVE_SPEED = 120;
 const JUMP_FORCE = 360;
 const BIG_JUMP_FORCE = 550;
 let CURRENT_JUMP_FORCE = JUMP_FORCE;
-let isJumping = true;
 const FALL_DEATH = 400;
+const ENEMY_SPEED = 20;
 
-loadRoot('https://i.imgur.com');
+let isJumping = true;
+
+loadRoot('https://i.imgur.com/');
 loadSprite('coin', 'wbKxhcd.png')
 loadSprite('evil-shroom', 'KPO3fR9.png')
 loadSprite('brick', 'pogC9x5.png')
@@ -166,8 +168,6 @@ scene('game', ({ level, score }) => {
     scoreLabel.text = scoreLabel.value;
   });
 
-  const ENEMY_SPEED = 20;
-
   action('dangerous', d => {
     d.move(-ENEMY_SPEED, 0);
   })
@@ -222,4 +222,4 @@ scene('lose', ({ score }) => {
   add([text(score, 32), origin('center'), pos(width()/2, height()/2)]);
 })
 
-start('game', { level: 0, score: 0});
+start('game', { level: 0, score: 0 });
